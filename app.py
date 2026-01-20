@@ -12,7 +12,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def initialize():
-    # Only run once per app session
     if "index_loaded" not in st.session_state:
         indexer = Indexer()
         indexer.build_index_from_json("output/intake_payload.json")
